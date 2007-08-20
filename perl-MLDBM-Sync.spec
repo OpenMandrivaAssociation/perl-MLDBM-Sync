@@ -15,7 +15,7 @@ Source0:	%{real_name}-%{version}.tar.bz2
 Url:		http://www.cpan.org
 BuildRequires:	perl-devel perl-Digest-MD5 perl-MLDBM
 BuildRoot:	%{_tmppath}/%{name}-buildroot/
-Requires:	/usr/bin/perl
+Requires:	perl-base
 BuildArch:	noarch
 
 %description
