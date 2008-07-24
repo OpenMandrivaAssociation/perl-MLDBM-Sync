@@ -1,7 +1,7 @@
 %define name	perl-MLDBM-Sync
 %define real_name    MLDBM-Sync
 %define version 0.30
-%define release %mkrel 5
+%define release %mkrel 7
 
 %define perl_sitelib %(eval "`perl -V:installsitelib`"; echo $installsitelib)
 
