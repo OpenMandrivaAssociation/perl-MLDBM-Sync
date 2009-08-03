@@ -1,28 +1,27 @@
-%define name	perl-MLDBM-Sync
-%define real_name    MLDBM-Sync
-%define version 0.30
-%define release %mkrel 8
+%define upstream_name    MLDBM-Sync
+%define upstream_version 0.30
 
 %define perl_sitelib %(eval "`perl -V:installsitelib`"; echo $installsitelib)
 
-Summary:	%{real_name} module for perl
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:	%{upstream_name} module for perl
 License:	Artistic
 Group:		Development/Perl
-Source0:	%{real_name}-%{version}.tar.bz2
-Url:		http://www.cpan.org
-BuildRequires:	perl-devel perl-Digest-MD5 perl-MLDBM
-BuildRoot:	%{_tmppath}/%{name}-buildroot/
-Requires:	perl-base
+Url:		http://search.cpan.org/dist/%{upsteam_name}
+Source0:	http://www.cpan.org/modules/by-module/%{upstream_name}-%{upstream_version}.tar.bz2
+
+BuildRequires: perl-Digest-MD5 perl-MLDBM
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
-%{real_name} module for perl
+%{upstream_name} module for perl
 
 %prep
-%setup -q -n %{real_name}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -43,5 +42,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc MANIFEST README
 %{_mandir}/*/*
 %{perl_vendorlib}/MLDBM
-
-
