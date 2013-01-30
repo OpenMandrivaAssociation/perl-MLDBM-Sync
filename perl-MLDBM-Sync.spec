@@ -9,7 +9,7 @@ Summary:	%{upstream_name} module for perl
 License:	Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upsteam_name}
-Source0:	http://www.cpan.org/modules/by-module/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://search.cpan.org/CPAN/authors/id/C/CH/CHAMAS/%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Digest::MD5)
