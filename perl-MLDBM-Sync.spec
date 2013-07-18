@@ -3,12 +3,12 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	3
 
 Summary:	%{upstream_name} module for perl
 License:	Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upsteam_name}
+Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/C/CH/CHAMAS/%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	perl-devel
