@@ -8,7 +8,7 @@ Release:	5
 Summary:	%{upstream_name} module for perl
 License:	Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/C/CH/CHAMAS/%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	perl-devel
