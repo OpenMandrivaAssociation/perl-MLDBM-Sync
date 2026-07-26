@@ -1,15 +1,13 @@
 %define upstream_name    MLDBM-Sync
-%define upstream_version 0.30
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.30
+Release:	7
 
 Summary:	%{upstream_name} module for perl
 License:	Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/MLDBM-Sync
-Source0:	https://cpan.metacpan.org/authors/id/C/CH/CHAMAS/MLDBM-Sync-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/C/CH/CHAMAS/MLDBM-Sync-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -21,7 +19,7 @@ BuildArch:	noarch
 %{upstream_name} module for perl.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -42,9 +40,7 @@ make test
 %changelog
 * Mon Aug 03 2009 Jérôme Quelin <jquelin@mandriva.org> 0.300.0-1mdv2010.0
 + Revision: 407686
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.30-8mdv2009.0
+- rebuild using %0.30 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.30-8mdv2009.0
 + Revision: 257849
 - rebuild
 
